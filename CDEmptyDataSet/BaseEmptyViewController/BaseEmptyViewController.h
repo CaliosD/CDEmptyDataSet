@@ -12,13 +12,19 @@
 #define kCDEmptyDataNoNetworkKey    @"暂无网络"
 #define kCDEmptyDataNetworkErrorKey @"网络加载失败"
 
+typedef NS_ENUM(NSInteger, EmptyType){
+    EmptyType_EmptyData,
+    EmptyType_NoNetwork,
+    EmptyType_NetworkError
+};
+
 @interface BaseEmptyViewController : UIViewController
 
 @property (nonatomic, strong) NSString *emptyTitle;
 @property (nonatomic, strong) UIImage *emptyImage;
 @property (nonatomic, assign) BOOL needsEmptyDataHandling;
 
-- (void)reloadEmptyData;
+- (void)reloadEmptyDataWithType:(EmptyType)type;
 - (void)startLoading;
 - (void)stopLoading;
 

@@ -58,9 +58,9 @@
 
 #pragma mark - Reload (Public)
 
-- (void)reloadEmptyData
+- (void)reloadEmptyDataWithType:(EmptyType)type
 {
-    [self cd_reloadEmptyData];
+    [self cd_reloadEmptyDataWithType:type];
 }
 
 #pragma mark - Load (Public)
@@ -84,8 +84,25 @@
 
 #pragma mark - Reload (Private)
 
-- (void)cd_reloadEmptyData
+- (void)cd_reloadEmptyDataWithType:(EmptyType)type
 {
+    switch (type) {
+        case EmptyType_EmptyData: {
+            self.emptyTitle = @"诶呦喂～～～";
+            self.emptyImage = [UIImage imageNamed:@"empty.png"];
+            break;
+        }
+        case EmptyType_NoNetwork: {
+            self.emptyTitle = kCDEmptyDataNoNetworkKey;
+            self.emptyImage = [UIImage imageNamed:@"network-none.png"];
+            break;
+        }
+        case EmptyType_NetworkError: {
+            self.emptyTitle = kCDEmptyDataNetworkErrorKey;
+            self.emptyImage = [UIImage imageNamed:@"wifi-error.png"];
+            break;
+        }
+    }
     self.emptyDataView.alpha = 0;
     self.listView.alpha = 0;
     if (_activityIndicatorView.animating) {

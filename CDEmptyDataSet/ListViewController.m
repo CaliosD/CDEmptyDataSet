@@ -23,7 +23,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.needsEmptyDataHandling = NO;
+    self.needsEmptyDataHandling = YES;
     self.title = @"CDEmptyDataSet";
     
     _data = @[];
@@ -60,12 +60,11 @@
         _data = [NSArray arrayWithArray:tmp];
     }
     else{
-        self.emptyTitle = @"诶呦喂～～～";
-        self.emptyImage = [UIImage imageNamed:@"empty.png"];
+
         _data = @[];
     }
 
-    [self reloadListData];
+    [self reloadListData:EmptyType_EmptyData];
 }
 
 /**
@@ -73,12 +72,9 @@
  */
 - (void)networkFailed
 {
-    self.emptyTitle = kCDEmptyDataNetworkErrorKey;
-    self.emptyImage = [UIImage imageNamed:@"wifi-error.png"];
-    
     _data = @[];
     
-    [self reloadListData];
+    [self reloadListData:EmptyType_NetworkError];
 }
 
 /**
@@ -86,12 +82,9 @@
  */
 - (void)noNetwork
 {
-    self.emptyTitle = kCDEmptyDataNoNetworkKey;
-    self.emptyImage = [UIImage imageNamed:@"network-none.png"];
-    
     _data = @[];
 
-    [self reloadListData];
+    [self reloadListData:EmptyType_NoNetwork];
 }
 
 /**
@@ -104,10 +97,10 @@
 
 #pragma mark - Private
 
-- (void)reloadListData
+- (void)reloadListData:(EmptyType)type
 {
     [_tableView reloadData];
-    [self reloadEmptyData];
+    [self reloadEmptyDataWithType:type];
 }
 
 - (UIBarButtonItem *)createItemWithTitle:(NSString *)title selector:(SEL)sel
