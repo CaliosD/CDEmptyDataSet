@@ -23,7 +23,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.needsEmptyDataHandling = YES;
+    self.needsEmptyDataHandling = NO;
     self.title = @"CDEmptyDataSet";
     
     _data = @[];
