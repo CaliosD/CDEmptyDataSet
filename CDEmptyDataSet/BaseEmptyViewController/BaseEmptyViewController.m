@@ -46,6 +46,7 @@
     [self.view addSubview:_emptyDataView];
     
     _activityIndicatorView = [[DGActivityIndicatorView alloc] initWithType:DGActivityIndicatorAnimationTypeLineScalePulseOut tintColor:[UIColor orangeColor]];
+    _activityIndicatorView.size = 50;
     _activityIndicatorView.center = self.view.center;
     [self.view addSubview:_activityIndicatorView];
 }

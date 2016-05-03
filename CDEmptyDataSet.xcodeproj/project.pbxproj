@@ -46,6 +46,7 @@
 		EE3336571CD8A72B00A5D7C5 /* network-none@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3336541CD8A72B00A5D7C5 /* network-none@2x.png */; };
 		EE3336581CD8A72B00A5D7C5 /* wifi-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3336551CD8A72B00A5D7C5 /* wifi-error@2x.png */; };
 		EE33365C1CD8ABB400A5D7C5 /* BaseEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33365B1CD8ABB400A5D7C5 /* BaseEmptyViewController.m */; };
+		EE33365E1CD8AF1100A5D7C5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EE33365D1CD8AF1100A5D7C5 /* README.md */; };
 		EE49A5721CD053A3008A47B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE49A5711CD053A3008A47B2 /* main.m */; };
 		EE49A5751CD053A3008A47B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE49A5741CD053A3008A47B2 /* AppDelegate.m */; };
 		EE49A57B1CD053A3008A47B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE49A5791CD053A3008A47B2 /* Main.storyboard */; };
@@ -142,6 +143,7 @@
 		EE3336551CD8A72B00A5D7C5 /* wifi-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-error@2x.png"; sourceTree = "<group>"; };
 		EE33365A1CD8ABB400A5D7C5 /* BaseEmptyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEmptyViewController.h; sourceTree = "<group>"; };
 		EE33365B1CD8ABB400A5D7C5 /* BaseEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEmptyViewController.m; sourceTree = "<group>"; };
+		EE33365D1CD8AF1100A5D7C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EE49A56D1CD053A3008A47B2 /* CDEmptyDataSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDEmptyDataSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE49A5711CD053A3008A47B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE49A5731CD053A3008A47B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		EE49A5641CD053A3008A47B2 = {
 			isa = PBXGroup;
 			children = (
+				EE33365D1CD8AF1100A5D7C5 /* README.md */,
 				EE49A56F1CD053A3008A47B2 /* CDEmptyDataSet */,
 				EE49A5891CD053A3008A47B2 /* CDEmptyDataSetUITests */,
 				EE49A56E1CD053A3008A47B2 /* Products */,
@@ -319,11 +322,11 @@
 			isa = PBXGroup;
 			children = (
 				EE3336591CD8ABB400A5D7C5 /* BaseEmptyViewController */,
-				EE3335C61CD8982E00A5D7C5 /* Bundle */,
 				EE49A5731CD053A3008A47B2 /* AppDelegate.h */,
 				EE49A5741CD053A3008A47B2 /* AppDelegate.m */,
 				EE49A5981CD08F18008A47B2 /* ListViewController.h */,
 				EE49A5991CD08F18008A47B2 /* ListViewController.m */,
+				EE3335C61CD8982E00A5D7C5 /* Bundle */,
 				EE49A5701CD053A3008A47B2 /* Supporting Files */,
 			);
 			path = CDEmptyDataSet;
@@ -484,6 +487,7 @@
 				EE3336341CD8A13000A5D7C5 /* DGActivityIndicatorBallScaleAnimation.m in Sources */,
 				EE3336361CD8A13000A5D7C5 /* DGActivityIndicatorBallScaleRippleAnimation.m in Sources */,
 				EE3336421CD8A13000A5D7C5 /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */,
+				EE33365E1CD8AF1100A5D7C5 /* README.md in Sources */,
 				EE3336481CD8A13000A5D7C5 /* DGActivityIndicatorTriangleSkewSpinAnimation.m in Sources */,
 				EE33363F1CD8A13000A5D7C5 /* DGActivityIndicatorLineScaleAnimation.m in Sources */,
 				EE3336401CD8A13000A5D7C5 /* DGActivityIndicatorLineScalePartyAnimation.m in Sources */,

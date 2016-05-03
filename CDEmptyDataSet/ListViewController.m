@@ -26,10 +26,7 @@
     self.needsEmptyDataHandling = YES;
     self.title = @"CDEmptyDataSet";
     
-    _data = @[
-//              NSStringFromClass([UITableViewController class]),
-//              NSStringFromClass([UICollectionViewController class])
-              ];
+    _data = @[];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -56,10 +53,11 @@
 - (void)reloadList
 {
     if (_data.count == 0) {
-        _data = @[
-                  NSStringFromClass([UITableViewController class]),
-                  NSStringFromClass([UICollectionViewController class])
-                  ];
+        NSMutableArray *tmp = [NSMutableArray array];
+        for (int i = 0; i < 10; i++) {
+            [tmp addObject:[NSString stringWithFormat:@"Cell %d",i]];
+        }
+        _data = [NSArray arrayWithArray:tmp];
     }
     else{
         self.emptyTitle = @"诶呦喂～～～";
