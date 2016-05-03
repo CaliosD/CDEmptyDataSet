@@ -55,11 +55,11 @@ Same as above.
 
 Call the start or stop method where you need start or stop.
 
-		[self startLoading];
+	    [self startLoading];
 
 or
 
-			[self stopLoading];
+	    [self stopLoading];
 
 will get the work done.
 
