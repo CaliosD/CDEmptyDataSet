@@ -47,6 +47,7 @@
 		EE3336581CD8A72B00A5D7C5 /* wifi-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3336551CD8A72B00A5D7C5 /* wifi-error@2x.png */; };
 		EE33365C1CD8ABB400A5D7C5 /* BaseEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33365B1CD8ABB400A5D7C5 /* BaseEmptyViewController.m */; };
 		EE33365E1CD8AF1100A5D7C5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EE33365D1CD8AF1100A5D7C5 /* README.md */; };
+		EE3336621CD8B58000A5D7C5 /* CDEmptyDataSet.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE3336611CD8B58000A5D7C5 /* CDEmptyDataSet.gif */; };
 		EE49A5721CD053A3008A47B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE49A5711CD053A3008A47B2 /* main.m */; };
 		EE49A5751CD053A3008A47B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE49A5741CD053A3008A47B2 /* AppDelegate.m */; };
 		EE49A57B1CD053A3008A47B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE49A5791CD053A3008A47B2 /* Main.storyboard */; };
@@ -144,6 +145,7 @@
 		EE33365A1CD8ABB400A5D7C5 /* BaseEmptyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEmptyViewController.h; sourceTree = "<group>"; };
 		EE33365B1CD8ABB400A5D7C5 /* BaseEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEmptyViewController.m; sourceTree = "<group>"; };
 		EE33365D1CD8AF1100A5D7C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EE3336611CD8B58000A5D7C5 /* CDEmptyDataSet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CDEmptyDataSet.gif; sourceTree = "<group>"; };
 		EE49A56D1CD053A3008A47B2 /* CDEmptyDataSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDEmptyDataSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE49A5711CD053A3008A47B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE49A5731CD053A3008A47B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		EE49A5641CD053A3008A47B2 = {
 			isa = PBXGroup;
 			children = (
+				EE3336611CD8B58000A5D7C5 /* CDEmptyDataSet.gif */,
 				EE33365D1CD8AF1100A5D7C5 /* README.md */,
 				EE49A56F1CD053A3008A47B2 /* CDEmptyDataSet */,
 				EE49A5891CD053A3008A47B2 /* CDEmptyDataSetUITests */,
@@ -439,6 +442,7 @@
 				EE3336571CD8A72B00A5D7C5 /* network-none@2x.png in Resources */,
 				EE49A57D1CD053A3008A47B2 /* Assets.xcassets in Resources */,
 				EE3336581CD8A72B00A5D7C5 /* wifi-error@2x.png in Resources */,
+				EE3336621CD8B58000A5D7C5 /* CDEmptyDataSet.gif in Resources */,
 				EE49A57B1CD053A3008A47B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
