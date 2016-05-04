@@ -38,6 +38,10 @@ Inherit your view controller from it.
 
 **Step 2:**
 
+Tell the controller that you want it to handle empty data for you.
+
+			self.needsEmptyDataHandling = YES;
+
 Set your own empty title or image as you need, or just leave the default and do nothing.
 
 	    self.emptyTitle = @"Sorry for the network failure";

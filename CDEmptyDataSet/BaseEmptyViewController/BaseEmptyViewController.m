@@ -103,54 +103,59 @@
             break;
         }
     }
-    self.emptyDataView.alpha = 0;
-    self.listView.alpha = 0;
+
     if (_activityIndicatorView.animating) {
         [_activityIndicatorView stopAnimating];
     }
     
-    if (_needsEmptyDataHandling && [self cd_itemsCount] == 0) {    // Calios: add networking check.
+    if (_needsEmptyDataHandling) {
         
-        CDEmptyDataView *view = self.emptyDataView;
+        self.emptyDataView.alpha = 0;
+        self.listView.alpha = 0;
         
-        if (!view.superview) {
-            if ([self.listView isKindOfClass:[UITableView class]] || [self.listView isKindOfClass:[UICollectionView class]]) {
-                [self.view insertSubview:view atIndex:0];
+        if ([self cd_itemsCount] == 0) {
+            CDEmptyDataView *view = self.emptyDataView;
+            
+            if (!view.superview) {
+                if ([self.listView isKindOfClass:[UITableView class]] || [self.listView isKindOfClass:[UICollectionView class]]) {
+                    [self.view insertSubview:view atIndex:0];
+                }
+                else{
+                    [self.view addSubview:view];
+                }
             }
-            else{
-                [self.view addSubview:view];
+            
+            [view prepareForReuse];
+            
+            NSString *title = [self cd_emptyTitle];
+            UIImage *image = [self cd_emptyImage];
+            
+            if (title) {
+                view.titleLabel.text = title;
             }
+            if (image) {
+                view.imageView.image = image;
+            }
+            
+            self.listView.hidden = YES;
+            
+            [view setupConstraints];
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                view.hidden = NO;
+                view.alpha = 1.0;
+            }];
         }
-        
-        [view prepareForReuse];
-        
-        NSString *title = [self cd_emptyTitle];
-        UIImage *image = [self cd_emptyImage];
-        
-        if (title) {
-            view.titleLabel.text = title;
+        else{
+            _emptyDataView.hidden = YES;
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                self.listView.hidden = NO;
+                self.listView.alpha = 1.0;
+            }];
         }
-        if (image) {
-            view.imageView.image = image;
-        }
-        
-        self.listView.hidden = YES;
-        
-        [view setupConstraints];
-        
-        [UIView animateWithDuration:0.25 animations:^{
-            view.hidden = NO;
-            view.alpha = 1.0;
-        }];
     }
-    else if ([self cd_itemsCount] > 0){
-        _emptyDataView.hidden = YES;
-        
-        [UIView animateWithDuration:0.25 animations:^{
-            self.listView.hidden = NO;
-            self.listView.alpha = 1.0;
-        }];
-    }
+
 }
 
 #pragma mark - Getter(Private)
