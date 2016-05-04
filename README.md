@@ -9,6 +9,11 @@
 
 ![][image-1]
 
+## Instructures
+
+- When handling with empty data, [DZNEmptyDataSet][1] helps so much. And if you merely want to handle empty data without having to inherit from any class, I recommend you to use it. So handy and fantastic!
+- When handling with loading process, I find DGActivityIndicatorView meets every aspect of my need, so I choose not to *reinvent the wheel*. So, don’t forget to put it into your project as well.
+
 ## Requirements
 
 * Xcode 7 or higher
@@ -21,7 +26,7 @@ Open and run the CDEmptyDataSet project in Xcode.
 
 ## Installation
 
-All you need to do is drop BaseEmptyViewController folder into your project.
+All you need to do is drop BaseEmptyViewController and DGActivityIndicatorView folder into your project.
 
 ## How to use
 
@@ -73,5 +78,7 @@ Calios
 
 - Github: https://github.com/CaliosD
 - Email: calios\_1124@163.com
+
+[1]:	https://github.com/dzenbot/DZNEmptyDataSet
 
 [image-1]:	https://raw.githubusercontent.com/CaliosD/CDEmptyDataSet/master/CDEmptyDataSet.gif
